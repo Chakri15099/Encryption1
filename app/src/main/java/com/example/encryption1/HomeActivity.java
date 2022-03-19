@@ -10,11 +10,15 @@ import android.widget.Button;
 public class HomeActivity extends AppCompatActivity {
 
     Button nav_send_message;
+    Button nav_encypt;
+    Button nav_decrypt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         nav_send_message = findViewById(R.id.newmessageBTN);
+        nav_encypt = findViewById(R.id.encryptBTN);
+        nav_decrypt = findViewById(R.id.decryptBTN);
 
         nav_send_message.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,5 +28,25 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        nav_encypt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent  (HomeActivity.this,EncryptActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        nav_decrypt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent_1 = new Intent  (HomeActivity.this,DecryptActivity.class);
+                startActivity(intent_1);
+            }
+        });
+
+
     }
 }

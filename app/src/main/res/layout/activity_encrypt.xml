@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EncryptActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/plainbg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-168dp" />
+
+    <TextView
+        android:id="@+id/messageTV"
+        android:layout_width="300dp"
+        android:layout_height="135dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:hint="@string/enter_your_message_here"
+        android:inputType="textMultiLine"
+        android:text="Enter Message to Encrypt"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <TextView
+        android:id="@+id/keyTV"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="Enter key"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageTV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/encryptBTN"
+        android:layout_width="183dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#20ffffff"
+        android:gravity="center"
+        android:text="Encrypt"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyTV"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/encryptedmessageTV"
+        android:layout_width="300dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="59dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="Encrypted Message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encryptBTN"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/copyBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="#20ffffff"
+        android:gravity="center"
+        android:text="Copy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encryptedmessageTV"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <Button
+        android:id="@+id/newmsgBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="102dp"
+        android:backgroundTint="#20ffffff"
+        android:gravity="center"
+        android:text="Send a new message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encryptedmessageTV"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
