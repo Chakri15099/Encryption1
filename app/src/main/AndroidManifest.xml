@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Encryption1">
         <activity
+            android:name=".SendActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegistrationActivity"
             android:exported="false" />
         <activity
