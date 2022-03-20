@@ -25,6 +25,12 @@
         <entry key="..\:/Users/S545559/Downloads/Encryption1/app/src/main/res/layout/activity_login.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/S545559/Downloads/Encryption1/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/S545559/Downloads/Encryption1/app/src/main/res/layout/activity_registration.xml" value="0.2" />
+        <entry key="..\:/Users/S545684/AndroidStudioProjects/finalmilestone1/app/src/main/res/layout/activity_decrypt.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/S545684/AndroidStudioProjects/finalmilestone1/app/src/main/res/layout/activity_encrypt.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/S545684/AndroidStudioProjects/finalmilestone1/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/S545684/AndroidStudioProjects/finalmilestone1/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/S545684/AndroidStudioProjects/finalmilestone1/app/src/main/res/layout/activity_registration.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/S545684/AndroidStudioProjects/finalmilestone1/app/src/main/res/layout/activity_send.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

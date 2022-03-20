@@ -13,12 +13,12 @@
         android:scaleType="centerCrop"
         android:src="@drawable/plainbg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-168dp" />
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
-        android:id="@+id/messageTV"
+        android:id="@+id/dmessageTV"
         android:layout_width="300dp"
         android:layout_height="135dp"
         android:background="@drawable/shape"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.053" />
 
     <TextView
-        android:id="@+id/keyTV"
+        android:id="@+id/dkeyTV"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginTop="19dp"
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/messageTV"
+        app:layout_constraintTop_toBottomOf="@+id/dmessageTV"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -68,7 +68,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/keyTV"
+        app:layout_constraintTop_toBottomOf="@+id/dkeyTV"
         app:layout_constraintVertical_bias="0.023" />
 
     <TextView
@@ -85,35 +85,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/decryptBTN"
         app:layout_constraintVertical_bias="0.0" />
-
     <Button
-        android:id="@+id/copyBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/enewmsgBTN"
+        android:layout_width="211dp"
+        android:layout_height="61dp"
         android:layout_marginTop="14dp"
         android:backgroundTint="#20ffffff"
         android:gravity="center"
-        android:text="Copy"
+        android:text="Encyrpt a new message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/decryptedmessageTV"
-        app:layout_constraintVertical_bias="0.054" />
+        app:layout_constraintVertical_bias="0.68" />
 
     <Button
-        android:id="@+id/newmsgBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="102dp"
+        android:id="@+id/dsendBTN"
+        android:layout_width="166dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="300dp"
         android:backgroundTint="#20ffffff"
         android:gravity="center"
         android:text="Send a new message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/decryptedmessageTV"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

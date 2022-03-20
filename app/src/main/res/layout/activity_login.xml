@@ -7,7 +7,6 @@
     android:background="@drawable/plainbg"
     tools:context=".LoginActivity">
 
-
     <TextView
         android:id="@+id/signinTV"
         android:layout_width="match_parent"
@@ -24,7 +23,6 @@
         android:textColor="@color/white"
         android:textSize="35dp"
         android:textStyle="bold">
-
     </TextView>
 
     <EditText
@@ -83,12 +81,10 @@
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.075">
-
     </Button>
 
     <Button
         android:id="@+id/createBTN"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/loginBTN"
@@ -103,10 +99,4 @@
         android:text="Create an acount">
 
     </Button>
-
-
-
-
-
-
 </RelativeLayout>

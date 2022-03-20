@@ -16,9 +16,12 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        this.setTitle("Home");
+
         nav_send_message = findViewById(R.id.newmessageBTN);
         nav_encypt = findViewById(R.id.encryptBTN);
-        nav_decrypt = findViewById(R.id.decryptBTN);
+        nav_decrypt = findViewById(R.id.decrpytBTN);
+
 
         nav_send_message.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,7 +35,6 @@ public class HomeActivity extends AppCompatActivity {
         nav_encypt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent = new Intent  (HomeActivity.this,EncryptActivity.class);
                 startActivity(intent);
             }
@@ -41,12 +43,9 @@ public class HomeActivity extends AppCompatActivity {
         nav_decrypt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent_1 = new Intent  (HomeActivity.this,DecryptActivity.class);
-                startActivity(intent_1);
+                Intent intentOne = new Intent(HomeActivity.this,DecryptActivity.class);
+                startActivity(intentOne);
             }
         });
-
-
     }
 }
