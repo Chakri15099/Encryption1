@@ -107,4 +107,30 @@ public class EncryptActivity extends AppCompatActivity {
                 break;
         }
     }
+
+
+    public void copyToClipboard(View view) {
+        encryptmessageTV = findViewById(R.id.encryptedmessageTV);
+
+        String copyText = String.valueOf(encryptmessageTV.getText());
+        if (encryptmessageTV.length() == 0) {
+            Toast.makeText(view.getContext(), "There is no message to copy", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        int sdk = android.os.Build.VERSION.SDK_INT;
+        if (sdk < android.os.Build.VERSION_CODES.HONEYCOMB) {
+            android.text.ClipboardManager clipboard = (android.text.ClipboardManager)
+                    view.getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+            clipboard.setText(copyText);
+        } else {
+            android.content.ClipboardManager clipboard = (android.content.ClipboardManager)
+                    view.getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+            android.content.ClipData clip = android.content.ClipData
+                    .newPlainText("Your message :", copyText);
+            clipboard.setPrimaryClip(clip);
+        }
+        Toast.makeText(view.getContext(),
+                "Your message has be copied", Toast.LENGTH_SHORT).show();
+    }
 }

@@ -99,6 +99,7 @@
         android:backgroundTint="#20ffffff"
         android:gravity="center"
         android:text="Copy"
+        android:onClick="copyToClipboard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.826"
