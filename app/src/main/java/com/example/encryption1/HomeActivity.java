@@ -18,6 +18,13 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         this.setTitle("Home");
 
+//        View recyclerView = findViewById(R.id.diplaymessageRV);
+//        LinearLayoutManager manager = new LinearLayoutManager(this);
+//        recyclerView.setLayoutManager(manager);
+//        recyclerView.setHasFixedSize(true);
+//        adapter = new MyAdapter();
+//        recyclerView.setAdapter(adapter);
+
         nav_send_message = findViewById(R.id.newmessageBTN);
         nav_encypt = findViewById(R.id.encryptBTN);
         nav_decrypt = findViewById(R.id.decrpytBTN);
