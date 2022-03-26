@@ -64,6 +64,7 @@
         android:layout_height="61dp"
         android:backgroundTint="#20ffffff"
         android:text="Send"
+        android:onClick="displayToast"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:gravity="center"
