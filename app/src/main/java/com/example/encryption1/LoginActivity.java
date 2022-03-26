@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -38,5 +39,8 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+    public void displayToast(View v) {
+        Toast.makeText(LoginActivity.this, "Login successfull", Toast.LENGTH_SHORT).show();
     }
 }

@@ -76,6 +76,7 @@
         android:backgroundTint="#70ffffff"
         android:gravity="center"
         android:text="Login"
+        android:onClick="displayToast"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.131"

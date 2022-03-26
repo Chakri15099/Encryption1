@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class RegistrationActivity extends AppCompatActivity {
     Button register;
@@ -23,5 +24,8 @@ public class RegistrationActivity extends AppCompatActivity {
                 startActivity(int_nav);
             }
         });
+    }
+    public void displayToast(View v) {
+        Toast.makeText(RegistrationActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
     }
 }

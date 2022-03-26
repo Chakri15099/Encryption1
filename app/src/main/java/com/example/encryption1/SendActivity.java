@@ -9,7 +9,7 @@ import android.widget.Toast;
 public class SendActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send);
         this.setTitle("Send message");
