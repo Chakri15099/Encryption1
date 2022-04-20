@@ -24,8 +24,9 @@ targetSdk 32<br>
 version "1.0"
 
 ## Advantages
-Maintain Security 
-Supports data integrity
+Move data Securely<br>
+Supports data integrity<br>
+Security across multiple devices
 
 
 
