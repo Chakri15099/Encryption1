@@ -19,4 +19,3 @@ public class SendActivity extends AppCompatActivity {
     public void displayToast(View v) {
         Toast.makeText(SendActivity.this, "Message sent successfully", Toast.LENGTH_SHORT).show();
     }
-    }
