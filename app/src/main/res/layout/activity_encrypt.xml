@@ -17,8 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/emessageTV"
+    <EditText
+        android:id="@+id/emessageET"
         android:layout_width="300dp"
         android:layout_height="135dp"
         android:background="@drawable/shape"
@@ -34,8 +34,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.126" />
 
-    <TextView
-        android:id="@+id/ekeyTV"
+    <EditText
+        android:id="@+id/ekeyET"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginTop="15dp"
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emessageTV"
+        app:layout_constraintTop_toBottomOf="@+id/emessageET"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -69,11 +69,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ekeyTV"
+        app:layout_constraintTop_toBottomOf="@+id/ekeyET"
         app:layout_constraintVertical_bias="0.023" />
 
-    <TextView
-        android:id="@+id/encryptedmessageTV"
+    <EditText
+        android:id="@+id/encryptedmessageET"
         android:layout_width="300dp"
         android:layout_height="135dp"
         android:layout_marginTop="15dp"
@@ -104,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.826"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/encryptedmessageTV"
+        app:layout_constraintTop_toBottomOf="@+id/encryptedmessageET"
         app:layout_constraintVertical_bias="0.054" />
 
     <Button
@@ -117,7 +117,7 @@
         android:text="Send a new message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/encryptedmessageTV" />
+        app:layout_constraintTop_toBottomOf="@+id/encryptedmessageET" />
 
     <TextView
         android:id="@+id/eselectalgorithmTV"
@@ -130,7 +130,7 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/emessageTV"
+        app:layout_constraintBottom_toTopOf="@+id/emessageET"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,7 +145,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/shape"
-        app:layout_constraintBottom_toTopOf="@+id/emessageTV"
+        app:layout_constraintBottom_toTopOf="@+id/emessageET"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.188"
         app:layout_constraintStart_toEndOf="@+id/eselectalgorithmTV"

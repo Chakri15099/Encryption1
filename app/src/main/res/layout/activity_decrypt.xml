@@ -18,14 +18,46 @@
         tools:layout_editor_absoluteY="0dp" />
 
     <TextView
-        android:id="@+id/dmessageTV"
+        android:id="@+id/dselectalgorithmTV"
+        android:layout_width="153dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#33FFFF00"
+        android:text="Select Algorithm"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dmessageET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.508" />
+
+    <Spinner
+        android:id="@+id/dselectionSPINNER"
+        android:layout_width="160dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape"
+        app:layout_constraintBottom_toTopOf="@+id/dmessageET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toEndOf="@+id/dselectalgorithmTV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <EditText
+        android:id="@+id/dmessageET"
         android:layout_width="300dp"
         android:layout_height="135dp"
         android:background="@drawable/shape"
         android:gravity="center"
-        android:hint="Enter message to decrypt"
+        android:hint="Enter Encrypted message"
         android:inputType="textMultiLine"
-        android:text="Enter Message to Encrypt"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,62 +65,62 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.151" />
 
-    <TextView
-        android:id="@+id/dkeyTV"
+    <EditText
+        android:id="@+id/dkeyET"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginTop="19dp"
         android:background="@drawable/shape"
         android:gravity="center"
-        android:text="Enter key"
+        android:hint="Enter Key"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dmessageTV"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/dmessageET"
+        app:layout_constraintVertical_bias="0.067" />
 
     <Button
-        android:id="@+id/decryptBTN"
+        android:id="@+id/decrpytionBTN"
         android:layout_width="183dp"
         android:layout_height="50dp"
-        android:layout_marginTop="25dp"
         android:backgroundTint="#20ffffff"
         android:gravity="center"
         android:text="Decrypt"
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:onClick="decrypt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dkeyTV"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toBottomOf="@+id/dkeyET"
+        app:layout_constraintVertical_bias="0.14" />
 
-    <TextView
-        android:id="@+id/decryptedmessageTV"
+    <EditText
+        android:id="@+id/decryptedmessageET"
         android:layout_width="300dp"
         android:layout_height="135dp"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/shape"
         android:gravity="center"
-        android:text="Decrypted Message"
+        android:hint="Decrypted Message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/decryptBTN"
+        app:layout_constraintTop_toBottomOf="@+id/decrpytionBTN"
         app:layout_constraintVertical_bias="0.0" />
+
     <Button
-        android:id="@+id/enewmsgBTN"
-        android:layout_width="211dp"
-        android:layout_height="61dp"
+        android:id="@+id/dnewmsgBTN"
+        android:layout_width="166dp"
+        android:layout_height="59dp"
         android:layout_marginTop="14dp"
         android:backgroundTint="#20ffffff"
         android:gravity="center"
@@ -97,8 +129,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/decryptedmessageTV"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintTop_toBottomOf="@+id/decryptedmessageET"
+        app:layout_constraintVertical_bias="0.142" />
 
     <Button
         android:id="@+id/dsendBTN"

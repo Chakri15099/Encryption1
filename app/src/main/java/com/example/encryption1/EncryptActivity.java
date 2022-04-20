@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,9 +22,9 @@ public class EncryptActivity extends AppCompatActivity {
 
     Button nav_new_message;
     Spinner selectionSpinner;
-    TextView plainmessageTV;
-    TextView keyTV;
-    TextView encryptmessageTV;
+    EditText plainmessageET;
+    EditText keyET;
+    EditText encryptmessageET;
     Button copy;
     Button encrypt;
     String[] algorithms = {"Advanced Encryption Standard","Triple Data Encryption Standard","Caesar Cipher"};
@@ -64,19 +65,19 @@ public class EncryptActivity extends AppCompatActivity {
         });
     }
     public void encrypt(View view) throws Exception {
-        plainmessageTV = findViewById(R.id.emessageTV);
-        keyTV = findViewById(R.id.ekeyTV);
-        encryptmessageTV = findViewById(R.id.encryptedmessageTV);
+        plainmessageET = findViewById(R.id.emessageET);
+        keyET = findViewById(R.id.ekeyET);
+        encryptmessageET = findViewById(R.id.encryptedmessageET);
 
-        String message = String.valueOf(plainmessageTV.getText());
-        String key = String.valueOf(keyTV.getText());
+        String message = String.valueOf(plainmessageET.getText());
+        String key = String.valueOf(keyET.getText());
         String algorithm = selectionSpinner.getSelectedItem().toString();
 
-        if (plainmessageTV.length() == 0) {
+        if (plainmessageET.length() == 0) {
             Toast.makeText(view.getContext(), "Enter a message to Encrypt", Toast.LENGTH_SHORT).show();
             return;
         }
-        if (keyTV.length() == 0) {
+        if (keyET.length() == 0) {
             Toast.makeText(view.getContext(), "Enter a Key for Encrypt", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -86,12 +87,12 @@ public class EncryptActivity extends AppCompatActivity {
             case "Advanced Encryption Standard":
                 AES aes = new AES();
                 String enc = aes.AESencrypt(key.getBytes("UTF-16LE"), message.getBytes("UTF-16LE"));
-                encryptmessageTV.setText(enc);
+                encryptmessageET.setText(enc);
                 break;
             case "Triple Data Encryption Standard":
                 DES des = new DES();
                 String encData = des.encrypt(key.getBytes("UTF-16LE"), message.getBytes("UTF-16LE"));
-                encryptmessageTV.setText(encData);
+                encryptmessageET.setText(encData);
                 break;
             case "Caesar Cipher":
                 if (key.isEmpty()) {
@@ -103,17 +104,17 @@ public class EncryptActivity extends AppCompatActivity {
                     return;
                 }
                 Caesarcipher c = new Caesarcipher();
-                encryptmessageTV.setText(c.caesarcipherEnc(message, Integer.parseInt(key)));
+                encryptmessageET.setText(c.caesarcipherEnc(message, Integer.parseInt(key)));
                 break;
         }
     }
 
 
     public void copyToClipboard(View view) {
-        encryptmessageTV = findViewById(R.id.encryptedmessageTV);
+        encryptmessageET = findViewById(R.id.encryptedmessageET);
 
-        String copyText = String.valueOf(encryptmessageTV.getText());
-        if (encryptmessageTV.length() == 0) {
+        String copyText = String.valueOf(encryptmessageET.getText());
+        if (encryptmessageET.length() == 0) {
             Toast.makeText(view.getContext(), "There is no message to copy", Toast.LENGTH_SHORT).show();
             return;
         }
