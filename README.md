@@ -25,6 +25,8 @@ version "1.0"
 
 ## Advantages
 Maintain Security 
+Supports data integrity
+
 
 
 ## Activities
