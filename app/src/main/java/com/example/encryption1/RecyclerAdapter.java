@@ -45,10 +45,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.userNa
         private TextView textViewUserName,textViewInbox;
         public userNameViewHolder(@NonNull View itemView) {
             super(itemView);
-            textViewUserName = itemView.findViewById(R.id.userNameTV);
+            textViewUserName = itemView.findViewById(R.id.sendusernameTV);
             textViewInbox = itemView.findViewById(R.id.inboxListTV);
 
         }
     }
 }
-

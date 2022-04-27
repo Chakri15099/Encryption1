@@ -26,7 +26,7 @@
     </TextView>
 
     <EditText
-        android:id="@+id/usernameTV"
+        android:id="@+id/usernameET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/signinTV"
@@ -45,10 +45,10 @@
     </EditText>
 
     <EditText
-        android:id="@+id/passwordTV"
+        android:id="@+id/passwordET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/usernameTV"
+        android:layout_below="@+id/usernameET"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -67,7 +67,7 @@
         android:id="@+id/loginBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/passwordTV"
+        android:layout_below="@id/passwordET"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
@@ -75,14 +75,15 @@
         android:layout_marginBottom="20dp"
         android:backgroundTint="#70ffffff"
         android:gravity="center"
-        android:text="Login"
         android:onClick="displayToast"
+        android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.075">
-    </Button>
+        app:layout_constraintVertical_bias="0.075"/>
+
+
 
     <Button
         android:id="@+id/createBTN"

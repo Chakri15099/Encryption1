@@ -1,14 +1,20 @@
 package com.example.encryption1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     private ArrayList<String>userNameList = new ArrayList<>();
     private ArrayList<String>inboxList = new ArrayList<>();
 
+    FirebaseAuth auth2;
 
 
     @Override
@@ -30,6 +37,8 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         this.setTitle("Home");
+
+        auth2 = FirebaseAuth.getInstance();
 
         nav_send_message = findViewById(R.id.newmessageBTN);
         nav_encypt = findViewById(R.id.encryptBTN);
@@ -46,7 +55,7 @@ public class HomeActivity extends AppCompatActivity {
         inboxList.add("From Sam " + "(XXX)-XXX-XXXX" + "Sam08@outook.com");
         inboxList.add("From Andrea " + "(XXX)-XXX-XXXX" + "andrea@gmail.com");
         adapter = new RecyclerAdapter(userNameList,inboxList,HomeActivity.this);
-                recyclerview.setAdapter(adapter);
+        recyclerview.setAdapter(adapter);
 
 
 
@@ -76,5 +85,21 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intentOne);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.layout_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.action_logout){
+            auth2.signOut();
+            startActivity(new Intent(HomeActivity.this,LoginActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

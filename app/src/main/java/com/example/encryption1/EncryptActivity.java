@@ -1,10 +1,14 @@
 package com.example.encryption1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,6 +17,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import Algorithms.AES;
 import Algorithms.Caesarcipher;
@@ -29,12 +35,15 @@ public class EncryptActivity extends AppCompatActivity {
     Button encrypt;
     String[] algorithms = {"Advanced Encryption Standard","Triple Data Encryption Standard","Caesar Cipher"};
 
+    FirebaseAuth auth3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_encrypt);
         this.setTitle("Encryption");
+
+        auth3 = FirebaseAuth.getInstance();
 
         nav_new_message = findViewById(R.id.enewmsgBTN);
         selectionSpinner = findViewById(R.id.eselectionSPINNER);
@@ -133,5 +142,21 @@ public class EncryptActivity extends AppCompatActivity {
         }
         Toast.makeText(view.getContext(),
                 "Your message has be copied", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.layout_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.action_logout){
+            auth3.signOut();
+            startActivity(new Intent(EncryptActivity.this,LoginActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

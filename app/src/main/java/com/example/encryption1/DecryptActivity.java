@@ -1,10 +1,14 @@
 package com.example.encryption1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Base64;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,6 +17,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import Algorithms.AES;
 import Algorithms.Caesarcipher;
@@ -28,6 +34,7 @@ public class DecryptActivity extends AppCompatActivity {
     EditText decrpytmessageET;
     String[] algorithms = {"Advanced Encryption Standard","Triple Data Encryption Standard","Caesar Cipher"};
 
+    FirebaseAuth auth4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +42,13 @@ public class DecryptActivity extends AppCompatActivity {
         setContentView(R.layout.activity_decrypt);
         this.setTitle("Decryption");
 
+        auth4 = FirebaseAuth.getInstance();
+
         nav_dnew_message = findViewById(R.id.dnewmsgBTN);
         nav_send_message = findViewById(R.id.dsendBTN);
         selectionSpinner = findViewById(R.id.dselectionSPINNER);
         decryptBTN = findViewById(R.id.decrpytionBTN);
-        
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(DecryptActivity.this, android.R.layout.simple_spinner_item, algorithms);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         selectionSpinner.setAdapter(adapter);
@@ -78,7 +87,7 @@ public class DecryptActivity extends AppCompatActivity {
         codedmessageET = findViewById(R.id.dmessageET);
         decryptionkeyET = findViewById(R.id.dkeyET);
         decrpytmessageET = findViewById(R.id.decryptedmessageET);
-        
+
         if (codedmessageET.length() == 0) {
             Toast.makeText(view.getContext(), "Enter a message to Decrypt", Toast.LENGTH_SHORT).show();
             return;
@@ -87,7 +96,7 @@ public class DecryptActivity extends AppCompatActivity {
             Toast.makeText(view.getContext(), "Enter a Key for Encrypt", Toast.LENGTH_SHORT).show();
             return;
         }
-        
+
         String message = codedmessageET.getText().toString();
         String key = decryptionkeyET.getText().toString();
         String algorithm = selectionSpinner.getSelectedItem().toString();
@@ -125,5 +134,20 @@ public class DecryptActivity extends AppCompatActivity {
                 break;
         }
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.layout_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.action_logout){
+            auth4.signOut();
+            startActivity(new Intent(DecryptActivity.this,LoginActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

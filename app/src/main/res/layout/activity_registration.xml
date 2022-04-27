@@ -19,7 +19,7 @@
         android:text="Register"
         android:textColor="@color/white"
         android:textSize="35dp"
-        android:textStyle="bold"></TextView>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/regusernameTV"
@@ -45,7 +45,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/regusernameTV"
-        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:background="#10ffffff"
         android:drawableLeft="@drawable/ic_baseline_mail_outline_24"
         android:drawablePadding="20dp"
@@ -57,18 +60,22 @@
     </EditText>
 
     <EditText
+        android:id="@+id/regpasswordTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/regpasswordTV"
         android:layout_below="@+id/emailTV"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:background="#10ffffff"
-        android:hint="Password"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:layout_margin="10dp"
-        android:padding="20dp"
         android:drawableLeft="@drawable/ic_baseline_info_24"
-        android:drawablePadding="20dp">
+        android:drawablePadding="20dp"
+        android:hint="Password"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white">
+
     </EditText>
 
     <EditText
@@ -96,11 +103,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/confirmpswdTV"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#70ffffff"
         android:gravity="center"
-        android:text="Register"
         android:onClick="displayToast"
+        android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.131"
