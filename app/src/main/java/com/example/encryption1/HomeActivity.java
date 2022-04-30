@@ -47,11 +47,14 @@ public class HomeActivity extends AppCompatActivity {
         this.setTitle("Home");
 
         auth2 = FirebaseAuth.getInstance();
-
+        database = FirebaseDatabase.getInstance();
+        reference = database.getReference();
+        user = auth2.getCurrentUser();
         nav_send_message = findViewById(R.id.newmessageBTN);
-        nav_encypt = findViewById(R.id.encryptBTN);
+        nav_encrypt = findViewById(R.id.encryptBTN);
         nav_decrypt = findViewById(R.id.decrpytBTN);
         recyclerview = findViewById(R.id.diplaymessageRV);
+        viewInboxBTN = findViewById(R.id.viewInboxBTN);
 
         recyclerview.setLayoutManager(new LinearLayoutManager(HomeActivity.this));
         userNameList.add("User A");
