@@ -57,20 +57,42 @@ public class HomeActivity extends AppCompatActivity {
         viewInboxBTN = findViewById(R.id.viewInboxBTN);
 
         recyclerview.setLayoutManager(new LinearLayoutManager(HomeActivity.this));
-        userNameList.add("User A");
-        userNameList.add("User B");
-        userNameList.add("User C");
-        inboxList.add("From John " +
-                "(XXX)-XXX-XXXX" +
-                "John@cloud.com");
-        inboxList.add("From Sam " + "(XXX)-XXX-XXXX" + "Sam08@outook.com");
-        inboxList.add("From Andrea " + "(XXX)-XXX-XXXX" + "andrea@gmail.com");
-        adapter = new RecyclerAdapter(userNameList,inboxList,HomeActivity.this);
-        recyclerview.setAdapter(adapter);
+        reference.child("Users").child(user.getUid()).child("userName").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                userName = snapshot.getValue().toString();
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
 
+        viewInboxBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                reference.child("Inbox").child(userName).addValueEventListener(new ValueEventListener() {
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot db : snapshot.getChildren()) {
+                            senderModel eachmsg = db.getValue(senderModel.class);
+                            userNameList.add(eachmsg.getFrom());
+                            inboxList.add(eachmsg.getMessage());
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                adapter = new RecyclerAdapter(userNameList, inboxList, HomeActivity.this);
+                recyclerview.setAdapter(adapter);
+            }
+        });
 
         nav_send_message.setOnClickListener(new View.OnClickListener() {
             @Override
