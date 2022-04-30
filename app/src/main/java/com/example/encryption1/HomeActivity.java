@@ -27,15 +27,18 @@ import java.util.Arrays;
 public class HomeActivity extends AppCompatActivity {
 
     Button nav_send_message;
-    Button nav_encypt;
+    Button nav_encrypt;
     Button nav_decrypt;
+    Button viewInboxBTN;
     private RecyclerView recyclerview;
     private RecyclerAdapter adapter;
-    private ArrayList<String>userNameList = new ArrayList<>();
-    private ArrayList<String>inboxList = new ArrayList<>();
-
+    private ArrayList<String> userNameList = new ArrayList<>();
+    private ArrayList<String> inboxList = new ArrayList<>();
+    String userName;
     FirebaseAuth auth2;
-
+    FirebaseUser user;
+    DatabaseReference reference;
+    FirebaseDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
