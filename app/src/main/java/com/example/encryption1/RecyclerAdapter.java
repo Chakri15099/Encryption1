@@ -7,12 +7,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.userNameViewHolder>{
-    private ArrayList<String>userNameList;
-    private ArrayList<String>inboxList;
+
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.userNameViewHolder> {
+    private ArrayList<String> userNameList;
+    private ArrayList<String> inboxList;
     private Context context;
 
     public RecyclerAdapter(ArrayList<String> userNameList, ArrayList<String> inboxList, Context context) {
