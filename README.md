@@ -10,6 +10,11 @@ Message Encryption is an Android  mobile application where a text  can be encryp
 
 Users communicate over social media, but messages are not secured when it passes through network. Intruder can access messages easily. We want to secure communication while transmitting the data.
 
+## PROPOSED SOLUTION
+
+So here we proposed a solution where the user message will  be encrypted by choosing the algorithm type from AES, DES, Caesar Cipher and gets decrypted when the receiver uses the shared key.
+
+
 
 
 ## Steps to use the app
