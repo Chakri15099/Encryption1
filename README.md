@@ -15,9 +15,15 @@ Users communicate over social media, but messages are not secured when it passes
 So here we proposed a solution where the user message will  be encrypted by choosing the algorithm type from AES, DES, Caesar Cipher and gets decrypted when the receiver uses the shared key.
 
 
+## FEATURES
+1.User Friendly<br>
+2.Authentication<br>
+3. Responsive Interface<br>
+4. Chat Support<br>
 
 
-## Steps to use the app
+
+## STEPS TO USE THE APP
 1.Login with the given Test credentials<br>
 2.If you are not registered create a new account and then login, You will be directed to the home page<br>
 3. Inorder to check the messages go to the view messages button which will display either nowmal messages or encrypted codes which  the user recived.<br>
