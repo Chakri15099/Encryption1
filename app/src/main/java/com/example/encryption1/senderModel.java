@@ -9,6 +9,8 @@ public class senderModel {
         this.message = message;
     }
 
-
+    public senderModel() {
     }
+
+
 }
