@@ -124,6 +124,7 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.layout_menu, menu);
+        menu.findItem(R.id.username).setTitle(userName);
         return super.onCreateOptionsMenu(menu);
     }
 
