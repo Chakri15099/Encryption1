@@ -42,7 +42,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.userNa
     }
 
     public class userNameViewHolder extends RecyclerView.ViewHolder {
-        private TextView textViewUserName,textViewInbox;
+        private TextView textViewUserName, textViewInbox;
+        private CardView cardview;
+
         public userNameViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewUserName = itemView.findViewById(R.id.sendusernameTV);
