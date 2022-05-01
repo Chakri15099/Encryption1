@@ -1,5 +1,5 @@
 # Encryption1
-### Team Members
+## Team Members
 [Chakradhar Prathivada](https://github.com/Chakri15099)<br>
 [Shruthi Patkur](https://github.com/pshruthi04)<br>
 [Sai Lakshmi Kundana Sakhamuri](https://github.com/kundanaSakhamuri98)<br>
@@ -22,6 +22,12 @@ Password:encry@123
 MinSdk 21<br>
 targetSdk 32<br>
 version "1.0"
+
+## Steps to use the app
+1.Login with the given Test credentials<br>
+2.If you are not registered create a new account and then login, You will be directed to the home page<br>
+3. Inorder to check the messages go to the view messages button which will direct you to an encrypted code.<br>
+4. Copy the Encrypted code and click the decrypted button.
 
 ## Advantages
 Move data Securely<br>
