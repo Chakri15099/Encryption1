@@ -98,15 +98,15 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent  (HomeActivity.this,SendActivity.class);
+                Intent i = new Intent(HomeActivity.this, SendActivity.class);
                 startActivity(i);
             }
         });
 
-        nav_encypt.setOnClickListener(new View.OnClickListener() {
+        nav_encrypt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent  (HomeActivity.this,EncryptActivity.class);
+                Intent intent = new Intent(HomeActivity.this, EncryptActivity.class);
                 startActivity(intent);
             }
         });
@@ -114,7 +114,7 @@ public class HomeActivity extends AppCompatActivity {
         nav_decrypt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentOne = new Intent(HomeActivity.this,DecryptActivity.class);
+                Intent intentOne = new Intent(HomeActivity.this, DecryptActivity.class);
                 startActivity(intentOne);
             }
         });
