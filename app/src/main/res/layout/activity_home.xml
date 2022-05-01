@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/viewInboxBTN"
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/new_message_card_design" />
 
@@ -89,6 +89,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/decrpytBTN"
         app:layout_constraintVertical_bias="0.028" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
