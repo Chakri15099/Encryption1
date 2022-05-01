@@ -95,6 +95,7 @@ public class SendActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.layout_menu, menu);
+        menu.findItem(R.id.username).setTitle(userName);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -103,6 +104,8 @@ public class SendActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.action_logout) {
             auth1.signOut();
             startActivity(new Intent(SendActivity.this, LoginActivity.class));
+        }
+        if (item.getItemId() == R.id.username) {
         }
         return super.onOptionsItemSelected(item);
     }
