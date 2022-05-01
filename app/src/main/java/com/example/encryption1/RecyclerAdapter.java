@@ -26,7 +26,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.userNa
     @NonNull
     @Override
     public userNameViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.new_message_card_design,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.new_message_card_design, parent, false);
         return new userNameViewHolder(view);
     }
 
@@ -34,12 +34,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.userNa
     public void onBindViewHolder(@NonNull userNameViewHolder holder, int position) {
         holder.textViewUserName.setText(userNameList.get(position));
         holder.textViewInbox.setText(inboxList.get(position));
-
     }
 
     @Override
     public int getItemCount() {
-
         return userNameList.size();
     }
 
