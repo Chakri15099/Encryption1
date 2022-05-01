@@ -22,7 +22,7 @@ So here we proposed a solution where the user message will  be encrypted by choo
 4. Chat Support<br>
 
 
-## Test Credentials
+## TEST CREDENTIALS
 1.User ID: Encry@gmail.com  <br>
   Password:encry@123 <br>
   
@@ -61,11 +61,19 @@ For our app we opted to maintain our data on Firebase platform.<br>
 3. firebase-database:20.0.4<br>	
 4. firebase-storage:20.0.1<br>
 
-##PROBLEMS FACED <br>
+## PROBLEMS FACED <br>
 Trying to reduce complexity over the activities<br>
 Time Management<br>
 Framing the Database Structure<br>
 Retrieving the required data from the database<br>
+
+## FUTURE IMPROVEMENTS <br>
+Ability to create or implement encryption using existing algorithms other than currently specified ones in our app.<br>
+Encryption for larger encryptions.<br>
+Providing user manual.<br>
+Ability to delete the read messages.<br>
+Pop Up notifications<br>
+
 
 
 
