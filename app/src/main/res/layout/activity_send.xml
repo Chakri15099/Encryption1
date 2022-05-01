@@ -18,7 +18,7 @@
         tools:layout_editor_absoluteY="50dp" />
 
     <EditText
-        android:id="@+id/emessageTV"
+        android:id="@+id/sendmessageTV"
         android:layout_width="300dp"
         android:layout_height="135dp"
         android:layout_marginTop="20dp"
