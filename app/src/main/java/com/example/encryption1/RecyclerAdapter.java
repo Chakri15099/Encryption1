@@ -49,7 +49,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.userNa
             super(itemView);
             textViewUserName = itemView.findViewById(R.id.sendusernameTV);
             textViewInbox = itemView.findViewById(R.id.inboxListTV);
-
+            cardview = itemView.findViewById(R.id.messageCV);
         }
     }
 }
