@@ -29,10 +29,10 @@ So here we proposed a solution where the user message will  be encrypted by choo
 2.User ID: Shruthi@gmail.com<br>
   Password: Shruthi@123<br>
   
-3. User ID:Chakri@gmail.com<br>
+3.User ID:Chakri@gmail.com<br>
    Password:Chakri@123<br>
  
-4. User ID: Sai@gmail.com<br>
+4.User ID: Sai@gmail.com<br>
    Password:Sai@123 <br>
 
 
@@ -50,6 +50,22 @@ So here we proposed a solution where the user message will  be encrypted by choo
 11. Copy the code and click the send button to send it the other user, you will be directed to send page.<br>
 12. Paste the encrypted code in the given box and enter an existing username whom you want to send the message and click send.<br>
 13. The message will be sent. In the reciever end to check the messages go to the vieew messages card and follow the 4,5,6 steps mentioned above.<br>
+
+## DESCRIPTION OF PERSISTENT DATA<br>
+Usage of  Realtime Database allows operations to execute quickly and also provides great realtime experience that can serve users without compromising on responsiveness.<br>
+For our app we opted to maintain our data on Firebase platform.<br>
+
+## API/ LIBRARY USED<br>
+1. circleimageview:3.1.0<br>     
+2. firebase-auth:21.0.1<br>
+3. firebase-database:20.0.4<br>	
+4. firebase-storage:20.0.1<br>
+
+
+
+
+
+
 
 
 
