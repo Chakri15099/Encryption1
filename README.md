@@ -61,6 +61,14 @@ For our app we opted to maintain our data on Firebase platform.<br>
 3. firebase-database:20.0.4<br>	
 4. firebase-storage:20.0.1<br>
 
+##PROBLEMS FACED <br>
+Trying to reduce complexity over the activities<br>
+Time Management<br>
+Framing the Database Structure<br>
+Retrieving the required data from the database<br>
+
+
+
 
 
 
