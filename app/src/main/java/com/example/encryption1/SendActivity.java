@@ -66,8 +66,28 @@ public class SendActivity extends AppCompatActivity {
             }
         });
 
+
+        sendBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                otherUser = mailidET.getText().toString();
+
+                String message = sendmessageTV.getText().toString();
+                if (!message.equals("")) {
+                    sendMessage(message);
+                    sendmessageTV.setText("");
+                } else
+                    Toast.makeText(SendActivity.this, "Message not sent successfully", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-    public void displayToast(View v) {
+
+    public void sendMessage(String message) {
+        String key = reference.child("Inbox").child(userName).push().getKey();
+        Map<String, Object> messageMap = new HashMap<>();
+        messageMap.put("from", userName);
+        messageMap.put("message", message);
+        reference.child("Inbox").child(otherUser).child(key).setValue(messageMap);
         Toast.makeText(SendActivity.this, "Message sent successfully", Toast.LENGTH_SHORT).show();
     }
 
