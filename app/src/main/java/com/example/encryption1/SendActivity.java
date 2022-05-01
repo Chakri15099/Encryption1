@@ -27,7 +27,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SendActivity extends AppCompatActivity {
+
+    EditText mailidET;
+    EditText sendmessageTV;
+    Button sendBTN;
     FirebaseAuth auth1;
+    FirebaseUser user;
+    DatabaseReference reference;
+    FirebaseDatabase database;
+    String userName;
+    String otherUser;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
