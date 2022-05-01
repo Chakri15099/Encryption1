@@ -44,7 +44,27 @@ public class SendActivity extends AppCompatActivity {
         setContentView(R.layout.activity_send);
         this.setTitle("Send message");
 
+        mailidET = findViewById(R.id.mailidET);
+        sendmessageTV = findViewById(R.id.sendmessageTV);
+        sendBTN = findViewById(R.id.sendBTN);
+
         auth1 = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        reference = database.getReference();
+        user = auth1.getCurrentUser();
+
+        reference.child("Users").child(user.getUid()).child("userName").addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                userName = snapshot.getValue().toString();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
     }
     public void displayToast(View v) {
