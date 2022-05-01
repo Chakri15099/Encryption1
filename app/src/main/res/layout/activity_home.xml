@@ -17,16 +17,17 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="-32dp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+    <Button
+        android:id="@+id/viewInboxBTN"
+        android:layout_width="247dp"
+        android:layout_height="42dp"
         android:layout_marginStart="10dp"
-        android:text="New Messages"
-        android:textAlignment="textStart"
+        android:text="View Messages"
+        android:backgroundTint="#01ffffff"
+        android:gravity="bottom"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
