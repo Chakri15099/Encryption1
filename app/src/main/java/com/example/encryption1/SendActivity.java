@@ -102,7 +102,7 @@ public class SendActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.action_logout) {
             auth1.signOut();
-            startActivity(new Intent(SendActivity.this,LoginActivity.class));
+            startActivity(new Intent(SendActivity.this, LoginActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
