@@ -94,13 +94,13 @@ public class SendActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.layout_menu,menu);
+        menuInflater.inflate(R.menu.layout_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.action_logout){
+        if (item.getItemId() == R.id.action_logout) {
             auth1.signOut();
             startActivity(new Intent(SendActivity.this,LoginActivity.class));
         }
