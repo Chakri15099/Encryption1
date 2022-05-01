@@ -22,6 +22,19 @@ So here we proposed a solution where the user message will  be encrypted by choo
 4. Chat Support<br>
 
 
+## Test Credentials
+1.User ID: Encry@gmail.com  <br>
+  Password:encry@123 <br>
+  
+2.User ID: Shruthi@gmail.com<br>
+  Password: Shruthi@123<br>
+  
+3. User ID:Chakri@gmail.com<br>
+   Password:Chakri@123<br>
+ 
+4. User ID: Sai@gmail.com<br>
+   Password:Sai@123 <br>
+
 
 ## STEPS TO USE THE APP
 1.Login with the given Test credentials<br>
